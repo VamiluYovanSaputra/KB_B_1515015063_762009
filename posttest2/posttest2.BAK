@@ -1,0 +1,38 @@
+predicates  
+	nondeterm
+	sore(long,symbol,symbol)
+	nondeterm
+	malam(long,symbol,symbol)
+	nondeterm
+	semua(long,symbol,symbol)
+	nondeterm
+	tingkahlaku(symbol,symbol)
+clauses
+	sore(1600,candycat,gorsegiri).
+	sore(1615,pencil,gorsegiri).
+	sore(1640,jiva,gorsegiri).
+	sore(1705,mysteryofblood,gorsegiri).
+	sore(1730,kawananrastaman,gorsegiri).
+	sore(1755,ruffus,gorsegiri).
+	malam(2000,gangstarasta,gorsegiri).
+	malam(2105,killingmeinside,gorsegiri).
+	malam(2210,djyasmine,gorsegiri).
+	
+	
+	semua(Waktu,Acara,Tempat):-
+	sore(Waktu,Acara,Tempat);
+	malam(Waktu,Acara,Tempat).
+	tingkahlaku(bernyanyi,teman).
+	tingkahlaku(menari,pacar).
+	tingkahlaku(berfoto,teman).
+		
+goal
+	malam(Waktu,Acara,Tempat),
+	Waktu=2000,
+	tingkahlaku(Sedang,Bersama),
+	Sedang=bernyanyi.
+	
+%skenario agenda jakcloth 2017
+	
+	
+	
